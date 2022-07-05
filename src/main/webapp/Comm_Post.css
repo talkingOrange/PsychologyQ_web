@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 10px 5px;
+}
+
+h1 {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+div {
+    /* font-size: 20px; */
+    text-align: center;
+}
+
+ul #community-top-menu {
+        list-style: none;
+        text-align: center;
+        border-top: 1px solid blue;
+        border-bottom: 1px solid blue;
+        padding: 10px 0;
+    }
+
+
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    color: #58666e;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjus: 100%;
+    /* iphone font size ���� ���� */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 2000;
+    background-color: #326A73 ;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    display: inline-block;
+    height: 36px;
+    margin: 12px 0 12px 25px;
+}
+
+.logo > img {
+    height: 36px;
+}
+
+nav {
+    float: right;
+}
+
+.nav-items {
+    margin-right: 20px;
+}
+
+.nav-items > li {
+    display: inline-block;
+    color: white;
+    /* �������� */
+}
+
+.nav-items > li > a {
+    line-height: 84px;
+    padding: 0 8px;
+    color: white;
+}
+
+.nav-items > li > a:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#main {
+    margin-left: 40px;
+    margin-right: 30px;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 3fr 0.7fr;
+    /*contents�� side�� ����*/
+}
+
+#main #contents {
+    min-height: 500px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+
+#main .community-left-menu {
+    width: 20%;
+    min-height: 750px;
+    float: left;
+    border: 1px solid blue;
+    list-style: none;
+    padding-top: 10%;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    background-color: #aaddff;
+}
+
+.community-left-menu > ul > li > a {
+    display: block;
+    color: black;
+    padding: 10px 0 10px 0px;
+}
+
+.community-left-menu > ul > li > a:hover:not(.active) {
+    background-color: #4CAFF0;
+}
+
+/*�Ѹ� ��� ����*/
+
+#community-rolling-banner {
+    width: inherit;
+    height: 100px;
+    margin-top: 0px;
+    background-color: #F8F6E4;
+}
+
+#community-rolling-banner > #rollong-banner {
+    width: auto;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.rollings {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rollings li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.rollings li.currentroll {
+    left: 0;
+    transition: left .5s ease-in-out, right .5s ease-in-out;
+}
+
+.rollings li.prevroll {
+    left: -150%;
+    transition: left .5s ease-in-out, right .5s ease-in-out;
+}
+
+.rollings.reverse li.prevroll {
+    transition: none;
+}
+
+.rollings li.nextroll {
+    left: 150%;
+    display: block;
+    transition: none;
+}
+
+.rollings.reverse li.nextroll {
+    transition: left .5s ease-in-out, right .5s ease-in-out;
+}
+
+#main #sidebar {
+    min-height: 500px;
+    background-color: #97DBD2;
+}
+
+#sidebar > ul {
+    width: 100%;
+    margin-top: 100px;
+}
+
+#sidebar > ul > li > a {
+    display: block;
+    color: #fff;
+    padding: 10px 0 10px 0px;
+}
+
+#sidebar > ul > li > a.active {
+    background-color: #F2E99B;
+    color: black;
+    }
+
+#sidebar > ul > li > a:hover:not(.active) {
+    background-color: #555;
+}
+
+#sidebar > h1 {
+    padding: 20px 0 20px 20px;
+    color: #fff;
+}
+
+#footer {
+    margin-top: 10px;
+    background-color: #b6bbbd;
+}
+
+@media (max-width:800px) {
+
+    /*���� �ʺ� 800px ������ �� �Ʒ� ��Ÿ�� ����*/
+    #main {
+        display: block;
+    }
+
+    #main #contents {
+        margin-bottom: 10px;
+        margin-right: 0px;
+    }
+
+    #main #sidebar {
+        min-height: 0;
+    }
+
+    #sidebar > ul {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20pt;
+    }
+    
+    #community {
+        min-height: 760px;
+    }
+}

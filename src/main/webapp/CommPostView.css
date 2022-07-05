@@ -1,0 +1,142 @@
+/*Ŀ�´�Ƽ �κ� ����*/
+
+#main #community {
+    width: inherit;
+    height: inherit;
+    text-align: center;
+}
+
+#main #community-table {
+    width: 80%;
+    line-height: 110%;
+    float: right;
+    box-sizing: inherit;
+    text-align: left;
+    font-size-adjust: auto;
+    margin-top: 0px;
+}
+
+#comment-content-title {
+    border: 1px solid black;
+    display: flex;
+    text-align: left;
+    width: 95%;
+    height: 40px;
+    margin-top: -25px;
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: black;
+}
+
+#contents-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#info-align {
+    margin-left: 30px;
+    min-width: 100%;
+    font-size: 0.85em;
+    margin-bottom: 20px;
+}
+
+#info-align .comment-user {
+    text-align: left;
+}
+
+#comment-content {
+    overflow: auto;
+    border: 1px solid black;
+    display: flex;
+    text-align: left;
+    width: 95%;
+    height: 360px;
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: black;
+}
+
+#writing-contents-view {
+    word-break: break-all;
+    padding: 10px;
+}
+
+.comment-input {
+    text-align: center;
+}
+
+#contents-view {
+    display: block;
+    width: 100%;
+}
+
+#new-comment {
+    width: 70%;
+}
+
+
+#comments {
+    background-color: aqua;
+    margin-left: 10px;
+    /**text-decoration: underline;*/
+    text-align: left;
+    font-size: 1.0em;
+    font-style: oblique;
+}
+
+#comments-table {
+    overflow: auto;
+    margin-left: 10px;
+    border: 1px solid black;
+    height: inherit;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+#comments-new {
+    display: inline-flex;
+    flex-direction: column-reverse;
+    min-width: 100%;
+}
+
+#community-input {
+    padding: 10px 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+}
+
+#comments-new .comment-user {
+    display: block;
+    color: dimgray;
+    font-size: 0.85em;
+    text-align: left;
+}
+
+.comment-content {
+    text-align: left;
+    padding-left: 10px;
+    color: black;
+    font-size: 1.0em;
+    word-wrap: break-word;
+}
+
+#comments-new .comment-date {
+    margin-top: 1px;
+    color: dimgray;
+    font-size: 0.85em;
+    text-align: left;
+}
+
+@media (max-width:600px) {
+    #main #community-left-menu {
+        min-height: 730px;
+    }
+
+    #info-align .comment-date {
+        margin-right: 25px;
+    }
+}

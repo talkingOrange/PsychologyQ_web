@@ -1,0 +1,530 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h4,
+h5,
+h6,
+p {
+    margin: 10px 5px;
+}
+
+p {
+    font-size: 9px;
+    text-align: right;
+    font-weight: 600;
+    color: black;
+    margin-right: 5%;
+    margin-top: 5%;
+
+}
+
+h1 {
+    font-size: 12px;
+    text-align: right;
+    margin-right: 30%;
+}
+
+h2 {
+    font-size: 15px;
+    color: #a80909;
+}
+
+h3 {
+    font-size: 8px;
+    color: green;
+}
+
+h4 {
+    text-align: left;
+    font-size: 8px;
+    margin-left: 5%;
+}
+
+h5 {
+    font-size: 14px;
+    text-align: left;
+    color: blue;
+}
+
+h6 {
+    font-size: 10px;
+    text-align: left;
+    color: purple;
+    margin-left: 1%;
+
+}
+
+div {
+    /* font-size: 20px; */
+    text-align: center;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    color: #58666e;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjus: 100%;
+    /* iphone font size 변경 방지 */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 2000;
+    background-color: #326A73;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    display: inline-block;
+    height: 36px;
+    margin: 12px 0 12px 25px;
+}
+
+.logo > img {
+    height: 36px;
+}
+
+nav {
+    float: right;
+}
+
+.nav-items {
+    margin-right: 20px;
+}
+
+.nav-items > li {
+    display: inline-block;
+    color: white;
+    /* 가로정렬 */
+}
+
+.nav-items > li > a {
+    line-height: 84px;
+    padding: 0 8px;
+    color: white;
+}
+
+.nav-items > li > a:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#main {
+    margin-left: 40px;
+    margin-right: 30px;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 3fr 0.7fr;
+    /*contents와 side의 비율*/
+}
+
+#banner {
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    min-height: 1000px;
+    min-height: 200px;
+    background-color: orange;
+}
+
+#main #contents {
+    min-height: 500px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+#main #sidebar {
+    min-height: 500px;
+    background-color: #97DBD2;
+    margin-right: 10px;
+}
+
+
+#sidebar > ul {
+    width: 100%;
+    margin-top: 100px;
+}
+
+
+#sidebar > ul > li > a {
+    display: block;
+    color: #fff;
+    padding: 10px 0 10px 0px;
+}
+
+#sidebar > ul > li > a.active {
+    background-color: #F2E99B;
+    color: black;
+}
+
+#sidebar > ul > li > a:hover:not(.active) {
+    background-color: #555;
+}
+
+#sidebar > h1 {
+    padding: 20px 0 20px 20px;
+    color: #fff;
+}
+
+#footer {
+    margin-top: 10px;
+    background-color: #b6bbbd;
+}
+
+/*css 추가*/
+#totalStar {
+    margin-top: 3%;
+    width: 95%;
+    margin-bottom: -2%;
+}
+
+#detailStar {
+    width: 95%;
+    padding: 3%;
+    margin-bottom: 1%;
+    border-color: white;
+}
+
+#reviewText {
+    width: 95%;
+    height: 300px;
+    padding: 4%;
+    background-color: rgba(179, 234, 242, 1);
+    border-radius: 5%;
+    border: 0px;
+    resize: none;
+    margin-right: 3%;
+    margin-bottom: 0%;
+}
+
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 5px 0px;
+}
+
+.rate:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate:not(:checked) > label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 23px;
+    color: #ccc;
+}
+
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/*상담사 태도 별*/
+.rateAttitude {
+    margin-left: -25%;
+    margin-top: 10%;
+}
+
+.rate1 {
+    padding: 10px 0px 0 -20px;
+}
+
+.rate2 {
+    padding: 10px 0px 0 -20px;
+}
+
+.rate3 {
+    padding: 10px 0px 0 -20px;
+}
+
+.rate1 > .rateAttitude {
+    float: left;
+    height: 46px;
+}
+
+.rate1 > .rateAttitude:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate1 > .rateAttitude:not(:checked) > label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ccc;
+}
+
+.rate1 > .rateAttitude:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rate1 > .rateAttitude > input:checked ~ label {
+    color: #00bfff;
+}
+
+.rate1 > .rateAttitude:not(:checked) > label:hover,
+.rate1 > .rateAttitude:not(:checked) > label:hover ~ label {
+    color: #009fd4;
+}
+
+.rate1 > .rateAttitude > input:checked + label:hover,
+.rate1 > .rateAttitude > input:checked + label:hover ~ label,
+.rate1 > .rateAttitude > input:checked ~ label:hover,
+.rate1 > .rateAttitude > input:checked ~ label:hover ~ label,
+.rate1 > .rateAttitude > label:hover ~ input:checked ~ label {
+    color: #008ebd;
+}
+
+/*예약 편의성 별*/
+.rateComfortable {
+    margin-left: -25%;
+    margin-top: 10%;
+}
+
+.rate2 > .rateComfortable {
+    float: left;
+    height: 46px;
+}
+
+.rate2 > .rateComfortable:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate2 > .rateComfortable:not(:checked) > label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ccc;
+}
+
+.rate2 > .rateComfortable:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rate2 > .rateComfortable > input:checked ~ label {
+    color: #00bfff;
+}
+
+.rate2 > .rateComfortable:not(:checked) > label:hover,
+.rate2 > .rateComfortable:not(:checked) > label:hover ~ label {
+    color: #009fd4;
+}
+
+.rate2 > .rateComfortable > input:checked + label:hover,
+.rate2 > .rateComfortable > input:checked + label:hover ~ label,
+.rate2 > .rateComfortable > input:checked ~ label:hover,
+.rate2 > .rateComfortable > input:checked ~ label:hover ~ label,
+.rate2 > .rateComfortable > label:hover ~ input:checked ~ label {
+    color: #008ebd;
+}
+
+/*상담소 위치 별*/
+.rateLocation {
+    margin-left: -25%;
+    margin-top: 10%;
+
+}
+
+.rate3 > .rateLocation {
+    float: left;
+    height: 46px;
+}
+
+.rate3 > .rateLocation:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate3 > .rateLocation:not(:checked) > label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ccc;
+}
+
+.rate3 > .rateLocation:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rate3 > .rateLocation > input:checked ~ label {
+    color: #00bfff;
+}
+
+.rate3 > .rateLocation:not(:checked) > label:hover,
+.rate3 > .rateLocation:not(:checked) > label:hover ~ label {
+    color: #009fd4;
+}
+
+.rate3 > .rateLocation > input:checked + label:hover,
+.rate3 > .rateLocation > input:checked + label:hover ~ label,
+.rate3 > .rateLocation > input:checked ~ label:hover,
+.rate3 > .rateLocation > input:checked ~ label:hover ~ label,
+.rate3 > .rateLocation > label:hover ~ input:checked ~ label {
+    color: #008ebd;
+}
+
+
+/*저장, 수정버튼*/
+
+#buttonId {
+    margin-top: 1%;
+    margin-left: 78%;
+    margin-bottom: 3%;
+}
+
+.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 33%;
+    font-size: 0.5rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgb(197, 92, 99);
+    background-image: linear-gradient(to top left,
+            rgba(0, 0, 0, .2),
+            rgba(0, 0, 0, .2) 30%,
+            rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+        inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.styled:hover {
+    background-color: rgb(187, 57, 66);
+    cursor: pointer;
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+        inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+input[class="detailSearch"] {
+    position: relative;
+    top: 2.2px;
+    margin-left: 5px;
+}
+
+#counter {
+    margin: 0 0 0 75%;
+    font-size: 4px;
+}
+
+
+@media (max-width:750px) {
+
+    /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
+    #main {
+        display: block;
+    }
+
+    #main #contents {
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    #main #sidebar {
+        min-height: 0;
+    }
+
+    #sidebar > ul {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20pt;
+    }
+
+
+    h2 {
+        font-size: 19px;
+    }
+
+    .rateComfortable {
+        margin-left: -25%;
+        margin-top: 10%;
+        margin-right: 0%;
+
+    }
+
+    .rateLocation {
+        margin-left: -25%;
+        margin-top: 10%;
+        margin-right: 0%;
+    }
+
+    .rateAttitude {
+        margin-left: -25%;
+        margin-top: 10%;
+        margin-right: 0%;
+    }
+
+    .styled {
+        padding: 0 23%;
+    }
+
+    #buttonId {
+        margin-left: 80%;
+    }
+
+    #data {
+        width: 100%;
+    }
+
+    h1 {
+        text-align: left;
+        margin-left: 0%;
+    }
+
+    #rateFactor {
+        width: 20%;
+    }
+
+}

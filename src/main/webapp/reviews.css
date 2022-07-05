@@ -1,0 +1,270 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 10px 5px;
+}
+
+h2 {
+    font-size: 16px;
+    text-align: left;
+    margin-top: 5%;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    text-align: left;
+    margin-bottom: 2%;
+}
+
+div {
+    /* font-size: 20px; */
+    text-align: center;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    color: #58666e;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjus: 100%;
+    /* iphone font size 변경 방지 */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 2000;
+    background-color: #326A73;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+
+.logo {
+    display: inline-block;
+    height: 36px;
+    margin: 12px 0 12px 25px;
+}
+
+.logo > img {
+    height: 36px;
+}
+
+nav {
+    float: right;
+}
+
+.nav-items {
+    margin-right: 20px;
+}
+
+.nav-items > li {
+    display: inline-block;
+    color: white;
+    /* 가로정렬 */
+}
+
+.nav-items > li > a {
+    line-height: 84px;
+    padding: 0 8px;
+    color: white;
+}
+
+.nav-items > li > a.nav-active {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-items > li > a:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#main {
+    margin-left: 40px;
+    margin-right: 30px;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 3fr 0.7fr;
+    /*contents와 side의 비율*/
+}
+
+#banner {
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    min-height: 1000px;
+    min-height: 200px;
+    background-color: orange;
+}
+
+#main #contents {
+    min-height: 500px;
+    background-color: white;
+    margin-right: 10px;
+    margin-top: 3px;
+
+}
+
+#main #sidebar {
+    min-height: 500px;
+    background-color: #97DBD2;
+    margin-right: 10px;
+}
+
+#sidebar > ul {
+    width: 100%;
+    margin-top: 100px;
+}
+
+
+#sidebar > ul > li > a {
+    display: block;
+    color: #fff;
+    padding: 10px 0 10px 0px;
+}
+
+#sidebar > ul > li > a.active {
+    background-color: #F2E99B;
+    color: black;
+}
+
+
+#sidebar > ul > li > a:hover:not(.active) {
+    background-color: #555;
+}
+
+#sidebar > h1 {
+    padding: 20px 0 20px 20px;
+    color: #fff;
+}
+
+#footer {
+    margin-top: 10px;
+    background-color: #b6bbbd;
+}
+
+
+/*게시판 리스트 목록*/
+
+.searchPicture {
+    width: 20px;
+    margin-right: 1%;
+    margin-bottom: -0.7%;
+}
+
+#searchBox {
+    margin-right: 1%;
+}
+
+h5:hover {
+    cursor: pointer;
+}
+
+.cell {
+    margin: 0.5% 0 3% 1%;
+    width: 95%;
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+}
+
+table.cell thead {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #369;
+    border-bottom: 3px solid #036;
+    border-top: 3px solid #036;
+
+}
+
+table.cell tbody th {
+    width: 350px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #f3f6f7;
+}
+
+table.cell td {
+    width: 200px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+
+table.cell td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+
+.showEllipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 260px;
+    margin-left: 16%;
+}
+
+#star {
+    width: 20px;
+}
+
+
+
+@media (max-width:600px) {
+
+    /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
+    #main {
+        display: block;
+    }
+
+    #main #contents {
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    #main #sidebar {
+        min-height: 0;
+    }
+
+    #sidebar > ul {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20pt;
+    }
+
+    .cell {
+        margin-left: 2%;
+        width: 96%
+    }
+
+    .showEllipsis {
+        width: 150px;
+        margin-left: 0%;
+    }
+}
